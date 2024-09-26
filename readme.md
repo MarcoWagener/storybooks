@@ -18,3 +18,30 @@ npm run dev
 # Run in production
 npm start
 ```
+## Setup
+```
+# Setup local Mongo DB instance in a Container
+docker run -p 27017:27017 -d mongo:3.6-xenial
+
+# Check DB status
+docker ps
+
+# Fix MongoDB connection
+npm install connect-mongo@latest
+```
+## Docker
+```
+# Setup
+create the following files
+
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Build
+docker  build -t storybooks-app .
+
+
+
+
+
